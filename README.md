@@ -5,7 +5,7 @@ Middleware echo-session is a session support for [echo](https://github.com/labst
 
 ### Installation
 
-	go get github.com/ipfans/echo-session
+	go get github.com/niggywizzywoz/echo-session
 
 ## Example
 
