@@ -1,6 +1,10 @@
 echo-session
 ======
 
+### NOTIFICATION
+
+This package was forked and fixed to run with Echo v3.0.3
+
 Middleware echo-session is a session support for [echo](https://github.com/labstack/echo/).
 
 ### Installation
@@ -13,9 +17,8 @@ Middleware echo-session is a session support for [echo](https://github.com/labst
 package main
 
 import (
-	"github.com/ipfans/echo-session"
+	"github.com/niggywizzywoz/echo-session"
 	"github.com/labstack/echo"
-	"github.com/labstack/echo/engine/standard"
 	"github.com/labstack/echo/middleware"
 )
 
@@ -28,9 +31,16 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	// Use Echo-session middleware
 	serv.Use(session.Sessions("GSESSION", store))
-	serv.Get("/", func(ctx echo.Context) error {
-		session := session.Default(ctx)
+	serv.GET("/", testHandler)
+	if err := serv.Start(":80"); err != nil {
+		panic(err)
+	}
+}
+
+func testHandler (c echo.Context) error {
+		session := session.Default(c)
 		var count int
 		v := session.Get("count")
 		if v == nil {
@@ -41,14 +51,12 @@ func main() {
 		}
 		session.Set("count", count)
 		session.Save()
-		ctx.JSON(200, map[string]interface{}{
+		return c.JSON(200, map[string]interface{}{
 			"visit": count,
 		})
 		return nil
 	})
-	serv.Run(standard.New(":8080"))
 }
-
 ```
 
 ## License
