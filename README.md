@@ -34,7 +34,7 @@ func main() {
 	// Use Echo-session middleware
 	serv.Use(session.Sessions("GSESSION", store))
 	serv.GET("/", testHandler)
-	if err := serv.Start(":80"); err != nil {
+	if err := serv.Start(":8000"); err != nil {
 		panic(err)
 	}
 }
