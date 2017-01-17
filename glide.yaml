@@ -1,0 +1,9 @@
+package: github.com/niggywizzywoz/echo-session
+import:
+- package: github.com/boj/redistore
+- package: github.com/garyburd/redigo
+  subpackages:
+  - redis
+- package: github.com/gorilla/sessions
+  version: ~1.1.0
+- package: github.com/labstack/echo

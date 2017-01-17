@@ -1,0 +1,46 @@
+hash: 9dd9d18bf6ba78be819c8f6c4dac8e36b7977aa4efc6b78f2f91118dfab5c801
+updated: 2017-01-17T20:53:11.632553052+03:00
+imports:
+- name: github.com/boj/redistore
+  version: fc113767cd6b051980f260d6dbe84b2740c46ab0
+- name: github.com/garyburd/redigo
+  version: 908534c8b97586a4597e3fa195875d2d26502b97
+  subpackages:
+  - internal
+  - redis
+- name: github.com/gorilla/context
+  version: 08b5f424b9271eedf6f9f0ce86cb9396ed337a42
+- name: github.com/gorilla/securecookie
+  version: fa5329f913702981df43dcb2a380bac429c810b5
+- name: github.com/gorilla/sessions
+  version: ca9ada44574153444b00d3fd9c8559e4cc95f896
+- name: github.com/labstack/echo
+  version: a89cf4d0c2649391a86ec30bb9394b7b5e8e72d8
+- name: github.com/labstack/gommon
+  version: f72d3c883f8ea180da8f085dd320804c41332ad1
+  subpackages:
+  - color
+  - log
+- name: github.com/mattn/go-colorable
+  version: d228849504861217f796da67fae4f6e347643f15
+- name: github.com/mattn/go-isatty
+  version: 30a891c33c7cde7b02a981314b4228ec99380cca
+- name: github.com/valyala/bytebufferpool
+  version: e746df99fe4a3986f4d4f79e13c1e0117ce9c2f7
+- name: github.com/valyala/fasttemplate
+  version: d090d65668a286d9a180d43a19dfdc5dcad8fe88
+- name: golang.org/x/crypto
+  version: 91902e332b9d47760598861512d2ae148f94ca58
+  subpackages:
+  - acme
+  - acme/autocert
+- name: golang.org/x/net
+  version: f2499483f923065a842d38eb4c7f1927e6fc6e6d
+  subpackages:
+  - context
+  - context/ctxhttp
+- name: golang.org/x/sys
+  version: d75a52659825e75fff6158388dddc6a5b04f9ba5
+  subpackages:
+  - unix
+testImports: []
